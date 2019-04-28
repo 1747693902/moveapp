@@ -70,3 +70,15 @@ span.water{
 	color:#fff;
 	font-weight: 800;
 }
+/* 我的消费记录 */
+#expense_calendar>span{
+	display: block;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #F0AD4E;
+	border-radius: 4px;
+}
