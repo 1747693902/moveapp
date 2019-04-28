@@ -1,0 +1,53 @@
+.my_water>span{
+	display: block;
+	width: 120px;
+	height: 30px;
+	background: #F0AD4E;
+	border-radius: 4px;
+	line-height: 30px;
+	text-align: center;
+	margin: 15px 0 15px 20px;
+	color: #000;
+}
+.my_water>ul{
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+}
+.my_water>ul>li:nth-child(2){
+	color: #FF0000;
+}
+.my_water>button{
+	display: block;
+	text-align: center;
+	margin: 15px auto;
+	width: 80%;
+	height: 40px;
+	background: #2AC845;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 800s;
+}
+.my_water>p{
+	text-align: center;
+	color: #FF0000;
+	letter-spacing: 3px;
+	font-size: 18px;
+	margin: 20px auto;
+}
+.my_water>ol{
+	width: 95%;
+	padding: 10px;
+	background: #fff;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.my_water>ol>li{
+	margin-bottom: 10px;
+}
+.my_water>ol>li>span{
+	color: #FF0000;
+}
