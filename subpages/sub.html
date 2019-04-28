@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/subpages4.css"/>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body id="body">
+		<!--下拉刷新容器-->
+		<div  id="pullrefresh" class="mui-content">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="consume_lis" >
+					<li>
+						<ul class="consume_lis_son">
+							<li>
+								<span>饮水</span>
+								<p>2020-04-27</p>
+							</li>
+							<li>0.10元</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="consume_lis_son">
+							<li>
+								<span>饮水</span>
+								<p>2020-04-27</p>
+							</li>
+							<li>0.10元</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="consume_lis_son">
+							<li>
+								<span>饮水</span>
+								<p>2020-04-27</p>
+							</li>
+							<li>0.10元</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="consume_lis_son">
+							<li>
+								<span>饮水</span>
+								<p>2020-04-27</p>
+							</li>
+							<li>0.10元</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="consume_lis_son">
+							<li>
+								<span>饮水</span>
+								<p>2020-04-27</p>
+							</li>
+							<li>0.10元</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					for (var i = cells.length, len = i + 3; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						//下拉刷新，新纪录插到最前面；
+//						table.insertBefore(li, table.firstChild);
+//					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+		}		
+		</script>
+	</body>
+
+</html>

@@ -141,6 +141,13 @@
 					"subpages/sub4.html"
 				],
 				"priority": 0
+			},
+			"subpages/subpages5.html": {
+				"resources": [
+					"subpages/sub.html"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {

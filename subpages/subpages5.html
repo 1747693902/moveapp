@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/subpages4.css"/>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
 		<script type="text/javascript" src="../js/mui.js" ></script>
 	<style type="text/css">
 			*{
@@ -21,13 +23,22 @@
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		    <h1 class="mui-title">我的消费记录</h1>
-		</header>
-		<div class="mui-content" id="expense_calendar">
-				<!--数据列表-->
-				<span>消费记录(共134条)</span>
-				<ul class="">
-					<li></li>
-				</ul>
-			</div>
-	</body>
+		</header>			
+		<div class="mui-content " id="expense_calendar">
+			<span>消费记录(共134条)</span>
+		</div>	
+<script>
+      mui.init({
+	    subpages:[{
+//	    	链接的子网页地址
+	      url:'sub.html',
+//	      链接这个子网页的里面的盒子的id
+	      id:'body',
+	      styles:{
+	      	top:'90px',
+	      }
+	    }]    
+  });
+</script>
+</body>
 </html>

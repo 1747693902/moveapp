@@ -82,3 +82,29 @@ span.water{
 	background: #F0AD4E;
 	border-radius: 4px;
 }
+.consume_lis>li{
+	width: 90%;
+	height: 50px;
+	background: #fff;
+	box-shadow:0 2px 2px #ccc;
+	margin: 10px auto ;
+	border-radius: 4px;
+}
+.consume_lis_son{
+	display: flex;
+	justify-content: space-between;
+}
+.consume_lis_son>li{
+	padding: 0 15px;
+}
+.consume_lis_son>li>p{
+	color: #ccc;
+	font-size: 12px;
+}
+.consume_lis_son>li:nth-child(1){
+	margin-top: 5px;
+}
+.consume_lis_son>li:nth-child(2){
+	line-height: 50px;
+	color:#FF0000;
+}
