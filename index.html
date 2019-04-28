@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/subpages1.css"/>
+    <style type="text/css">
+    	*{
+    		padding: 0;
+    		margin: 0;
+    		list-style: none;
+    	}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body style="height: 100%;overflow:hidden ;">
+	<header class="mui-bar mui-bar-nav">
+	    <a class=" mui-icon  mui-pull-right iconfont icon-ren" id="subpages2"></a>
+	    <h1 class="mui-title">城善智能云平台</h1>    
+	</header>
+<script type="text/javascript" charset="utf-8">	  
+     	mui.init({
+      	 subpages:[{
+//	    	链接的子网页地址
+	      url:'subpages/subpages1.html',
+//	      链接这个子网页的里面的盒子的id
+	      id:'lis',
+	      styles:{
+	      	top:'45px',
+	      }
+	    }]
+  });
+  
+document.getElementById('subpages2').addEventListener('tap',function(){
+	 mui.openWindow({
+			url: 'subpages/subpages2.html', 
+			id:'denglu'
+		})
+})
+</script>
+</body>
+<script type="text/javascript" src="../js/sbupages.js"></script>
+</html>

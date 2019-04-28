@@ -1,0 +1,72 @@
+span.water{
+	display: block;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 30px;
+	font-size: 18px;	
+	color: #fff;
+	letter-spacing: 2px;
+	background: #F0AD4E;
+}
+.top_up{
+	width: 90%;
+	height: 350px;
+	margin: 20px auto 0;
+	background: #fff;
+	overflow: auto;
+}
+.top_up>ul{
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.top_up>ul>li{
+	margin: 20px auto 0;
+	width: 27%;
+	text-align: center;
+}
+.top_up>ul>li>a{
+	display: block;
+	margin: 0 auto;
+	width: 95%;
+	border: 1px solid #ccc;
+	height:60px;
+	line-height: 60px;
+	color: #000000;
+	box-shadow: 0 0 2px #000000;
+}
+.top_up>button{
+	display: block;
+	width: 80%;
+	height: 40px;
+	background: #0ED151;
+	border-radius: 4px;
+	text-align: center;
+	margin: 15px auto 0;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+.chooseA{
+	background: #0ED151;
+}
+/*我要洗衣区域*/
+.no_have{
+	width: 60%;
+	height: 50px;
+	background: #2AC845;
+	margin: 100px auto 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 4px;
+}
+.no_have>span{
+	font-size: 20px;
+	color:#fff;
+	font-weight: 800;
+}

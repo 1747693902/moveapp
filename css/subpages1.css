@@ -1,0 +1,180 @@
+#imgs_lunbo>a>img{
+	width: 400px;
+	height: 250px;
+}
+.selection_function{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+.selection_function>li{
+	width: 33.3%;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+}
+.selection_function>li:nth-child(3){
+	border-right: 1px solid #fff;
+}
+.selection_function>li:nth-child(6){
+	border-right: 1px solid #fff;
+}
+.selection_function>li>a>p{
+	text-align: center;
+	margin-top: 5px;
+	color: #000000;
+	font-size: 15px;
+}
+.selection_function>li:nth-child(1)>a>span{
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgb(128,194,32);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+.selection_function>li:nth-child(2)>a>span{
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgb(184,151,244);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+.selection_function>li:nth-child(3)>a>span{
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgb(135,232,223);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+.selection_function>li:nth-child(4)>a>span{
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgb(255,120,120);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+.selection_function>li:nth-child(5)>a>span{
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgb(95,169,162);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+.selection_function>li:nth-child(6)>a>span{
+	margin: 0 auto;
+	display: block;
+	width:60px;
+	height: 60px;
+	background: rgb(255,154,50);
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	color: rgba(230,243,212,0.8);
+	border-radius: 15px;
+}
+/*第二章的内容*/
+.my_phone{
+	display: flex;
+	justify-content: space-between;
+	
+}
+.there_id{
+	margin-top: 25px;
+}
+.there_id>li{
+	margin: 0 auto;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 10px;
+	
+}
+.there_id>li>a{
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.there_id>li:nth-child(1){	
+	background: #FF0000;
+}
+.there_id>li:nth-child(2){	
+	background: #0ED151;
+}
+.there_id>li:nth-child(3){	
+	background: #1C4FF0;
+}
+/*}获取打水码*/
+span.water{
+	display: block;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 30px;
+	font-size: 18px;	
+	color: #fff;
+	letter-spacing: 2px;
+	background: #F0AD4E;
+}
+.fetch_water{
+	margin: 20px auto 0;
+	width: 90%;
+	height: 150px;
+	background: #fff;
+	box-shadow: 0 0 2px #222;
+}
+.fetch_water>ul>li{
+	box-sizing: border-box;
+	padding: 5px 10px;
+}
+.fetch_water>ul>li:nth-child(1){
+	font-size: 15px;
+	color: #666;
+}
+.fetch_water>ul>li:nth-child(2){
+	font-size: 18px;
+	color: #FF0000;
+}
+.fetch_water>ul>li:nth-child(3){
+	text-align: center;
+}
+.fetch_water>ul>li:nth-child(3)>button{
+	width: 80%;
+	height: 40px;
+	line-height: 30px;
+	background: #2AC845;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}

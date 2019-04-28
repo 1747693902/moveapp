@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+		<link rel="stylesheet" href="../css/subpages1.css" />
+		<style type="text/css">
+    	*{
+    		padding: 0;
+    		margin: 0;
+    		list-style: none;
+    	}
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+	</head>
+	<body>
+		<div class="mui-content mui-scroll-wrapper">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider" >
+
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate" id="imgs_lunbo">
+			      <a href="#">
+			        <img src="../imgs/b251dc6a3eac.jpg">
+			      </a>
+			    </div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item" id="imgs_lunbo">
+			      <a href="#">
+			        <img src="../imgs/t012a210f3330dbffd8.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item" id="imgs_lunbo">
+			      <a href="#">
+			        <img src="../imgs/b251dc6a3eac.jpg">
+			      </a>
+			    </div>
+			    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate" id="imgs_lunbo">
+			      <a href="#">
+			        <img src="../imgs/t012a210f3330dbffd8.jpg">
+			      </a>
+			    </div>
+			  </div>
+			  <div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>
+			</div>
+		<!--打水选项栏-->
+		<ul class="selection_function">
+			<li>
+				<a href="subpages3.html" open-type="common">
+					<span class="iconfont icon-shuidi"></span>	
+					<p>我要打水</p>
+				</a>
+			</li>
+			<li>
+				<a href="subpagesno.html" open-type="common">
+					<span class="iconfont icon-yifu"></span>	
+					<p>我要洗衣</p>
+				</a>
+			</li>
+			<li>
+				<a href="sub4.html" open-type="common">
+					<span class="iconfont icon-chongzhi"></span>	
+					<p>在线充值</p>
+				</a>
+			</li>
+			<li>
+				<a href="subpages5.html" open-type="common">
+					<span class="iconfont icon-xiaofei"></span>	
+					<p>我的消费记录</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" open-type="common">
+					<span class="iconfont icon-shuoming"></span>	
+					<p>使用说明</p>
+				</a>
+			</li>
+			<li>
+				<a href="#" open-type="common">
+					<span class="iconfont icon-weibiaoti--"></span>	
+					<p>固定打水码</p>
+				</a>
+			</li>
+		</ul>
+	
+		</div>		
+		<script type="text/javascript">
+			//获得slider插件对象
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+				  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+				
+				
+		var aniShow = "slide-in-right";
+			//关于backbutton和menubutton两个按键的说明，在iOS平台不存在，故需隐藏
+			if(!mui.os.android){
+				var span = document.getElementById("android-only")
+				if(span){
+					span.style.display = "none";
+				}
+				aniShow = "pop-in";
+			}
+		var subWebview=null,template=null,index=null;
+			mui.plusReady(function () {
+				//获得主页面webview引用；
+				index = plus.webview.currentWebview().opener();
+			})
+			mui('.selection_function').on('tap', 'a', function() {
+				var id = this.getAttribute("href");
+				var type = this.getAttribute("open-type");
+				var href = this.href;
+				if(type=="common"||mui.os.ios){
+					var webview_style = {
+						popGesture: "close"
+					};
+					mui.openWindow({
+						id: id,
+						url: href,
+						styles: webview_style,
+						show: {
+							aniShow: aniShow
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}else{
+					var href = this.href;
+					var title = this.innerText;
+					template = plus.webview.getWebviewById("default-main");
+					//获得共用子webview
+					subWebview = template.children()[0];
+					
+					//通知模板修改标题，并显示隐藏右上角图标；
+					mui.fire(template,'updateHeader',{title:title,showMenu:false});
+					if (subWebview.getURL() != href) {
+						subWebview.loadURL(href);
+					} else {
+						 subWebview.show();
+					}
+					template.show('slide-in-right', 150);
+				}
+			});
+		</script>
+	</body>
+</html>
